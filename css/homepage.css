@@ -1,0 +1,113 @@
+#nav{
+    /* background-color: aquamarine; */
+    height: 60px;
+}
+#left_nav{
+    float: left;
+}
+#right_nav{
+    float: right;
+    
+}
+#right_nav_link{
+    float: left;
+    margin: 10px 800px 0px 0px;
+}
+#right_nav_btn{
+    float: right;
+    margin: 10px 40px 0px 0px;
+}
+.login{
+    margin-right: 10px;
+}
+.nav_link{
+    padding-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+#wallpaper_div{
+    width: 100%;
+    height: 750px;
+    /* background-color: rgb(139, 243, 208); */
+    /* overflow: hidden; */
+    position: relative;
+}
+#wallpaper_div img{
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+#wallpaper_div p{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #1A3636;
+    font-size: 50px;
+    font-weight: bold;
+}
+#wallpaper_div button{
+    position: absolute;
+    top: 63%;
+    left: 9.5%;
+    transform: translate(-50%, -50%);
+}
+#about_us{
+    height: 500px;
+}
+/* #abt_left_card{
+    
+    width: 380px;
+    height: 360px;
+    margin: 22% 0 0 27px;
+    border: 1px solid green;
+    border-radius: 7px;
+    box-shadow: 2px 2px 2px 2px rgb(0,0,0,0.1); 
+} */
+#abt_left{
+    float: left;
+    width: 50%;
+    height: 500px;
+    position: relative;
+    /* background-color: antiquewhite */
+}
+#abt_img{
+    margin: 70px 0 0 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+#abt_img img{
+    border-radius: 10px;
+
+}
+#abt_img_border{
+    margin: 80px 0 0 340px;
+    height: 315px;
+    width: 320px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    border: 2px solid green;
+    border-radius: 10px
+}
+#abt_right{
+    float: right;
+    /* background-color: aquamarine; */
+    width: 50%;
+    height: 500px;
+}
+#abt_right_content{
+    margin: 100px 300px 0 0;
+}
+.cheakbox_icon{
+    height: 20px;
+    width: 20px;
+    margin-right: 4px;
+}
