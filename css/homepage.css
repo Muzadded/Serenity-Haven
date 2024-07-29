@@ -4,6 +4,7 @@
 }
 #left_nav{
     float: left;
+    margin-left:90px ;
 }
 #right_nav{
     float: right;
@@ -11,7 +12,7 @@
 }
 #right_nav_link{
     float: left;
-    margin: 10px 800px 0px 0px;
+    margin: 14px 100px 0px 0px;
 }
 #right_nav_btn{
     float: right;
@@ -110,4 +111,80 @@
     height: 20px;
     width: 20px;
     margin-right: 4px;
+}
+.service_icon{
+    width: 40px;
+    height: 40px;
+}
+#service{
+    margin: 20px 10% 20px 15%;
+    display: flex;
+}
+.services_div{
+    width: 26%;
+    height: 240px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 2px 2px 2px #ffffff;
+    flex: 1;
+}
+.services_div:hover{
+    box-shadow: 5px 5px 5px #888888;
+}
+#review{
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    height: 350px;
+}
+#profile_icon{
+    width: 50px;
+    height: 50px;
+    margin: 30px 0 0 48.5%;
+}
+#learn_more{
+    margin: 5% 15% 0 15%;
+}
+#learn_more_left{
+    float: left;
+    
+    width: 50%;
+    height: 350px;
+}
+#learn_more_right{
+    float: right;
+    padding-left: 80px;
+    width: 50%;
+    height: 350px;
+}
+#learn_more_img{
+    width: 80%;
+    height: 310px;
+    border-radius: 10px;
+    object-fit: fill;
+}
+
+#contact_div{
+    background-color: rgb(81, 170, 89);
+    margin: 6% 5% 0 23%;
+    width: 55%;
+    height: 230px;
+    border-radius: 5px;
+}
+#footer{
+    background-color: #EEEEEE;
+    height: 300px;
+    margin-top: 50px;
+}
+#footer_left{
+    float: left;
+    width: 30%;
+    margin: 100px 0 0 100px;
+}
+#footer_right{
+    float: right;
+    width: 30%;
+    margin: 100px 0 0 100px;
 }
