@@ -1,0 +1,125 @@
+#nav{
+    /* background-color: aquamarine; */
+    height: 60px;
+}
+#left_nav{
+    float: left;
+    margin-left:90px ;
+}
+#right_nav{
+    float: right;
+    
+}
+#right_nav_link{
+    float: left;
+    margin: 14px 100px 0px 0px;
+}
+#right_nav_btn{
+    float: right;
+    margin: 10px 40px 0px 0px;
+}
+.login{
+    margin-right: 10px;
+}
+.nav_link{
+    padding-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+#wallpaper_div{
+    width: 100%;
+    height: 750px;
+    /* background-color: rgb(139, 243, 208); */
+    /* overflow: hidden; */
+    position: relative;
+}
+#wallpaper_div img{
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+#wallpaper_div p{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    color: #1A3636;
+    font-size: 50px;
+    font-weight: bold;
+}
+#learn_more{
+    margin: 5% 15% 0 15%;
+}
+#learn_more_left{
+    float: left;
+    
+    width: 50%;
+    height: 350px;
+}
+#learn_more_right{
+    float: right;
+    padding-left: 80px;
+    width: 50%;
+    height: 350px;
+}
+#learn_more_img{
+    width: 80%;
+    height: 310px;
+    border-radius: 10px;
+    object-fit: fill;
+}
+#contact_div{
+    background-color: rgb(81, 170, 89);
+    margin: 6% 5% 0 23%;
+    width: 55%;
+    height: 230px;
+    border-radius: 5px;
+}
+#footer{
+    background-color: #EEEEEE;
+    height: 300px;
+    margin-top: 50px;
+}
+#footer_left{
+    float: left;
+    width: 30%;
+    margin: 100px 0 0 100px;
+}
+#footer_right{
+    float: right;
+    width: 30%;
+    margin: 100px 0 0 100px;
+}
+#care_giver{
+    margin: 100px 0 0 200px;
+}
+#care_giver_slot1{
+    display: flex;
+}
+#care_giver_slot2{
+    display: flex;
+}
+.givers{
+    width: 50px;
+    height: 400px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
+    flex: 1;
+}
+.givers:hover{
+    box-shadow: 8px 8px 8px #888888;
+}
+.givers img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+}
