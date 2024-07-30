@@ -37,9 +37,9 @@
 #wallpaper_div img{
     opacity: 0.6;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: 80%;
+    object-fit: fill;
+    /* object-position: top; */
     border-radius: 10px;
 }
 #wallpaper_div p{

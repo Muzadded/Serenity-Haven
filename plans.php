@@ -28,7 +28,7 @@
         </div>
     </div>
     <div id="wallpaper_div">
-        <img src="assets/servies_cover.jpg" alt="">
+        <img src="assets/plans_cover.jpg" alt="">
         <p>Our Services</p>
     </div>
     <p align="center" style="margin-top:100px; font-weight:bold; font-size:50px; color: #1A3636">Our Plans</p>
