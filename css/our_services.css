@@ -124,9 +124,6 @@
     margin-left: 50PX;
     margin-right: 30PX;
 }
-#social_act{
-
-}
 .social_act_slot{
     display: flex;
     margin: 40px 390px 10px 390px;
@@ -155,6 +152,5 @@ margin-top: 10px;
 font-weight: bold;
 }
 .act_det{
-    opacity: 0.8;
-    
+    opacity: 0.8;   
 }

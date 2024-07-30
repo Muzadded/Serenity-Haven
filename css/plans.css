@@ -1,0 +1,91 @@
+#nav{
+    /* background-color: aquamarine; */
+    height: 60px;
+}
+#left_nav{
+    float: left;
+    margin-left:90px ;
+}
+#right_nav{
+    float: right;
+    
+}
+#right_nav_link{
+    float: left;
+    margin: 14px 100px 0px 0px;
+}
+#right_nav_btn{
+    float: right;
+    margin: 10px 40px 0px 0px;
+}
+.login{
+    margin-right: 10px;
+}
+.nav_link{
+    padding-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+#wallpaper_div{
+    width: 100%;
+    height: 500px;
+    /* background-color: rgb(139, 243, 208); */
+    /* overflow: hidden; */
+    position: relative;
+}
+#wallpaper_div img{
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+#wallpaper_div p{
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    
+    transform: translate(-50%, -50%);
+    color: #173B45;
+    font-size: 80px;
+    font-weight: bold;
+}
+#footer{
+    background-color: #EEEEEE;
+    height: 300px;
+    margin-top: 50px;
+}
+#footer_left{
+    float: left;
+    width: 30%;
+    margin: 100px 0 0 100px;
+}
+#footer_right{
+    float: right;
+    width: 30%;
+    margin: 100px 0 0 100px;
+}
+#our_plan{
+    display: flex;
+    margin: 80px 100px 50px 22%;
+}
+.plan_card{
+    background-color: #329954;
+    width: 250px;
+    height: 350px;
+    color: rgb(247, 247, 247);
+    margin-left: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+}
+.join_btn{
+    margin-left: 25%;
+    width: 80px;
+    background-color: #8ddaa7;
+}
+#donation{
+    margin: 20px 30% 30px 32%;
+}
