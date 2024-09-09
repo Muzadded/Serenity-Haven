@@ -22,7 +22,7 @@
                 <a class="nav_link" href="plans.php" style="color: #399918;">Plans & Donate</a>
             </div>
             <div id="right_nav_btn">
-                <a class="btn btn-success login" href="#" role="button">Log In</a>
+                <a class="btn btn-success login" href="login.php" role="button">Log In</a>
                 <a class="btn btn-success contact_btn" href="#" role="button">Contact Us</a>
             </div>
         </div>
