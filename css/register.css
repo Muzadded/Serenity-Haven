@@ -1,0 +1,156 @@
+/* General reset and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#nav {
+    /* background-color: aquamarine; */
+    height: 60px;
+}
+
+#left_nav {
+    float: left;
+    margin-left: 90px;
+}
+
+#right_nav {
+    float: right;
+
+}
+
+#right_nav_link {
+    float: left;
+    margin: 14px 100px 0px 0px;
+}
+
+#right_nav_btn {
+    float: right;
+    margin: 10px 40px 0px 0px;
+}
+
+.login {
+    margin-right: 10px;
+}
+
+.nav_link {
+    padding-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+/* Container to center the registration box */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    /* background-color: #1A9B62; */
+    /* Green background */
+}
+
+/* Registration box design */
+.registration-box {
+    background-color: white;
+    padding: 40px;
+    width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.registration-box h2 {
+    text-align: center;
+    color: #1A9B62;
+    /* Green color for the heading */
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Form group container for the two columns */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Left and Right columns */
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+/* General input field styles (for input and select) */
+.left-column input, .right-column input, .right-column select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    appearance: none; /* Removes the default arrow for select on some browsers */
+    background-color: white;
+}
+
+/* Optional: Add custom styling for the select box arrow */
+.right-column select {
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDEwIDYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzY2NiIgZD0iTTEgMWw0IDQgNCA0VjBoMTBWMFY2ek00IDJsMS0xIDEtMSIvPjwvc3ZnPg==') no-repeat right 10px center;
+    background-size: 12px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+/* Submit button and login text */
+.submit-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-btn {
+    background-color: #1A9B62;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #157a4f;
+}
+
+.submit-section p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.submit-section a {
+    text-decoration: none;
+    color: #1A9B62;
+}
+
+.submit-section a:hover {
+    text-decoration: underline;
+}
+
+#footer {
+    background-color: #EEEEEE;
+    height: 240px;
+    margin-top: 30px;
+}
+
+#footer_left {
+    float: left;
+    width: 30%;
+    margin: 60px 0 0 100px;
+}
+
+#footer_right {
+    float: right;
+    width: 30%;
+    margin: 60px 0 0 100px;
+}

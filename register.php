@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css\logins.css">
-    <title>Document</title>
+    <title>Registration Page</title>
+
+    <link rel="stylesheet" href="css/register.css">
 </head>
 
 <body>
@@ -27,38 +28,41 @@
             </div>
         </div>
     </div>
-
     <div class="container">
-        <div class="login-box">
-            <div class="form-section">
-                <h2>Welcome to</h2>
-                <h1>Old Age Care Center</h1>
-                <p>Login to your account</p>
-
-                <form action="#">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="riya@gmail.com" required>
-
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="********" required>
-
-                    <div class="remember-forgot">
-                        <label><input type="checkbox" name="remember" checked> Remember me</label>
-                        <a href="#">Forgot password?</a>
+        <div class="registration-box">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="form-group">
+                    <div class="left-column">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password" required>
+                        <input type="text" placeholder="Guardian Name" required>
+                        <input type="text" placeholder="Relation" required>
+                        <input type="number" placeholder="Age" required>
+                    </div>
+                    <div class="right-column">
+                        <input type="tel" placeholder="Contact Number" required>
+                        <input type="text" placeholder="Address" required>
+                        <input type="text" placeholder="Previous Health Records" required>
+                        <input type="file" placeholder="Upload a Picture">
+                        <input type="text" placeholder="Hobby">
+                        <select>
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
                     </div>
 
-                    <button type="submit" class="login-btn">Login</button>
-                </form>
-
-                <p class="sign-up">Don't have an account? <a href="register.php">Sign in</a></p>
-            </div>
-
-            <div class="image-section">
-                <img src="assets/logins_cover.jpg" alt="Old Age Care Center">
-            </div>
+                </div>
+                <div class="submit-section">
+                    <button type="submit" class="register-btn">Register</button>
+                    <p>Already have an account? <a href="#">Log in</a></p>
+                </div>
+            </form>
         </div>
     </div>
-
 
     <div id="footer">
         <div id="footer_left">

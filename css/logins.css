@@ -34,20 +34,6 @@
   font-weight: 500;
 }
 
-/* #login_div{
-  background-color: aqua;
-  margin: 5% 20% 5% 20%;
-  
-}
-#right_div{
-  background-color: bisque;
-  float: right;
-}
-#left_div{
-  background-color: rgb(110, 70, 21);
-  float: left;
-} */
-
 .container {
   display: flex;
   justify-content: center;
