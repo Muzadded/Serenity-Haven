@@ -14,9 +14,9 @@
         </div>
         <div id="right_nav">
             <div id="right_nav_link">
-                <a class="nav_link" href="index.html" style="color: #399918;">Home</a>
-                <a class="nav_link" href="about_us.html">About Us</a>
-                <a class="nav_link" href="our_services.html">Our Services</a>
+                <a class="nav_link" href="index.php" style="color: #399918;">Home</a>
+                <a class="nav_link" href="about_us.php">About Us</a>
+                <a class="nav_link" href="our_services.php">Our Services</a>
                 <a class="nav_link" href="plans.php">Plans & Donate</a>
             </div>
             <div id="right_nav_btn">
