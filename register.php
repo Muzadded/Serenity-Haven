@@ -24,7 +24,7 @@
             </div>
             <div id="right_nav_btn">
                 <a class="btn btn-success login" href="register.php" role="button">Register</a>
-                <a class="btn btn-success contact_btn" href="#" role="button">Contact Us</a>
+                <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="submit-section">
                     <button type="submit" class="register-btn">Register</button>
-                    <p>Already have an account? <a href="#">Log in</a></p>
+                    <p>Already have an account? <a href="login.php">Log in</a></p>
                 </div>
             </form>
         </div>

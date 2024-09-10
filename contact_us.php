@@ -23,7 +23,7 @@
             </div>
             <div id="right_nav_btn">
                 <a class="btn btn-success login" href="login.php" role="button">Log In</a>
-                <a class="btn btn-success contact_btn" href="#" role="button">Contact Us</a>
+                <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a>
             </div>
         </div>
     </div>
