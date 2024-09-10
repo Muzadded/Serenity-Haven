@@ -1,0 +1,133 @@
+#nav{
+    /* background-color: aquamarine; */
+    height: 60px;
+}
+#left_nav{
+    float: left;
+    margin-left:90px ;
+}
+#right_nav{
+    float: right;
+    
+}
+#right_nav_link{
+    float: left;
+    margin: 14px 100px 0px 0px;
+}
+#right_nav_btn{
+    float: right;
+    margin: 10px 40px 0px 0px;
+}
+.login{
+    margin-right: 10px;
+}
+.nav_link{
+    padding-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    margin-top: 150px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background-color: #f0f8f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #3c763d;
+    font-size: 16px;
+}
+
+.comment-section {
+    width: 75%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.comment-section h2 {
+    color: #3c763d;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    font-family: Arial, sans-serif;
+}
+
+.button-group {
+    display: flex;
+    justify-content:flex-end;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #fff;
+    color: #3c763d;
+    border: 1px solid #3c763d;
+    margin-right: 10px;
+}
+
+.save-btn {
+    background-color: #3c763d;
+    color: white;
+}
+
+#footer{
+    background-color: #f0f8f7;
+    height: 300px;
+    margin-top: 120px;
+}
+#footer_left{
+    float: left;
+    width: 30%;
+    margin: 100px 0 0 100px;
+}
+#footer_right{
+    float: right;
+    width: 30%;
+    margin: 100px 0 0 100px;
+}
