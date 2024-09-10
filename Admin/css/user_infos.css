@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 15%;
+    background-color: #2e8b57;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    /* width: 50px; */
+    height: 50px;
+}
+
+/* Client Request Table */
+.client-request-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.client-request-table th, .client-request-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.client-request-table th {
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+}
+
+.client-request-table td {
+    font-size: 16px;
+    color: #333;
+}
+
+.accept {
+    color: green;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.accept:hover {
+    text-decoration: underline;
+}
+
+.delete {
+    color: red;
+    text-decoration: none;
+}
+
+.delete:hover {
+    text-decoration: underline;
+}
+
+/* Load More Button */
+.load-more {
+    text-align: center;
+}
+
+.load-more button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3cb371;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.load-more button:hover {
+    background-color: #2e8b57;
+}
