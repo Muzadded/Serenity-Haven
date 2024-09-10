@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Registration Page</title>
-
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/contact_us.css">
+    <title>Document</title>
 </head>
 
 <body>
@@ -23,47 +22,33 @@
                 <a class="nav_link" href="plans.php">Plans & Donate</a>
             </div>
             <div id="right_nav_btn">
-                <a class="btn btn-success login" href="register.php" role="button">Register</a>
+                <a class="btn btn-success login" href="login.php" role="button">Log In</a>
                 <a class="btn btn-success contact_btn" href="#" role="button">Contact Us</a>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="registration-box">
-            <h2>Registration</h2>
-            <form action="#">
-                <div class="form-group">
-                    <div class="left-column">
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="password" placeholder="Password" required>
-                        <input type="text" placeholder="Guardian Name" required>
-                        <input type="text" placeholder="Relation" required>
-                        <input type="number" placeholder="Age" required>
-                    </div>
-                    <div class="right-column">
-                        <input type="tel" placeholder="Contact Number" required>
-                        <input type="text" placeholder="Address" required>
-                        <input type="text" placeholder="Previous Health Records" required>
-                        <input type="file" placeholder="Upload a Picture">
-                        <input type="text" placeholder="Hobby">
-                        <select>
-                            <option value="" disabled selected>Choose your plan</option>
-                            <option value="weekly">Weekly</option>
-                            <option value="monthly">Monthly</option>
-                            <option value="yearly">Yearly</option>
-                        </select>
-                    </div>
 
-                </div>
-                <div class="submit-section">
-                    <button type="submit" class="register-btn">Register</button>
-                    <p>Already have an account? <a href="#">Log in</a></p>
-                </div>
-            </form>
-        </div>
+    <div id="wallpaper_div">
+        <img src="assets/contact_us.jpg" alt="">
+        <p>Contact Us</p>
     </div>
-
+    <section class="form-section">
+        <h2>Submit an advice or complaint</h2>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <textarea id="message" name="message" placeholder="Message" maxlength="1000" required></textarea>
+                <span id="char-count">0/1000</span>
+            </div>
+            <div class="button-group">
+                <button type="button" class="cancel-btn">Cancel</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </section>
     <div id="footer">
         <div id="footer_left">
             <img style="width: 50px; height: 50px;" src="assets/logo.jpg" alt=""><span style="margin-left:10px ;font-size: 20px; font-weight: bold; color: #399918;">Serenity Care Center</span>

@@ -37,15 +37,16 @@
 #wallpaper_div img{
     opacity: 0.6;
     width: 100%;
-    height: 80%;
-    object-fit: fill;
-    /* object-position: top; */
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+    object-position:center ;
+    border-radius: 3px;
 }
 #wallpaper_div p{
     position: absolute;
     top: 80%;
     left: 25%;
+    
     transform: translate(-50%, -50%);
     color: #173B45;
     font-size: 80px;
@@ -79,21 +80,6 @@
     height: 230px;
     border-radius: 5px;
 }
-#footer{
-    background-color: #EEEEEE;
-    height: 300px;
-    margin-top: 50px;
-}
-#footer_left{
-    float: left;
-    width: 30%;
-    margin: 100px 0 0 100px;
-}
-#footer_right{
-    float: right;
-    width: 30%;
-    margin: 100px 0 0 100px;
-}
 #care_giver{
     margin: 100px 0 0 200px;
 }
@@ -124,4 +110,19 @@
     height: 200px;
     object-fit: cover;
     object-position: top;
+}
+#footer{
+    background-color: #EEEEEE;
+    height: 300px;
+    margin-top: 50px;
+}
+#footer_left{
+    float: left;
+    width: 30%;
+    margin: 100px 0 0 100px;
+}
+#footer_right{
+    float: right;
+    width: 30%;
+    margin: 100px 0 0 100px;
 }

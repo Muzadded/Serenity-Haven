@@ -1,0 +1,143 @@
+#nav{
+    /* background-color: aquamarine; */
+    height: 60px;
+}
+#left_nav{
+    float: left;
+    margin-left:90px ;
+}
+#right_nav{
+    float: right;
+    
+}
+#right_nav_link{
+    float: left;
+    margin: 14px 100px 0px 0px;
+}
+#right_nav_btn{
+    float: right;
+    margin: 10px 40px 0px 0px;
+}
+.login{
+    margin-right: 10px;
+}
+.nav_link{
+    padding-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+#wallpaper_div{
+    width: 100%;
+    height: 500px;
+    /* background-color: rgb(139, 243, 208); */
+    /* overflow: hidden; */
+    position: relative;
+}
+#wallpaper_div img{
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3px;
+}
+#wallpaper_div p{
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    
+    transform: translate(-50%, -50%);
+    color: #173B45;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+/* Form Section */
+.form-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.form-section h2 {
+    color: #3c763d;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+    font-family: Arial, sans-serif;
+}
+
+#char-count {
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #fff;
+    color: #3c763d;
+    border: 1px solid #3c763d;
+}
+
+.submit-btn {
+    background-color: #3c763d;
+    color: white;
+}
+
+#footer{
+    background-color: #EEEEEE;
+    height: 300px;
+    margin-top: 50px;
+}
+#footer_left{
+    float: left;
+    width: 30%;
+    margin: 100px 0 0 100px;
+}
+#footer_right{
+    float: right;
+    width: 30%;
+    margin: 100px 0 0 100px;
+}
