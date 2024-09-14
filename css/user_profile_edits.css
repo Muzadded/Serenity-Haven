@@ -1,27 +1,32 @@
-#nav{
-    /* background-color: aquamarine; */
+#nav {
     height: 60px;
 }
-#left_nav{
+
+#left_nav {
     float: left;
-    margin-left:90px ;
+    margin-left: 90px;
 }
-#right_nav{
+
+#right_nav {
     float: right;
-    
+
 }
-#right_nav_link{
+
+#right_nav_link {
     float: left;
     margin: 14px 100px 0px 0px;
 }
-#right_nav_btn{
+
+#right_nav_btn {
     float: right;
     margin: 10px 40px 0px 0px;
 }
-.login{
+
+.login {
     margin-right: 10px;
 }
-.nav_link{
+
+.nav_link {
     padding-left: 30px;
     text-decoration: none;
     color: black;
@@ -34,7 +39,6 @@
     margin: 30px auto;
 }
 
-/* Sidebar */
 .sidebar {
     width: 25%;
     background-color: #f0f8f7;
@@ -56,7 +60,6 @@
     font-size: 16px;
 }
 
-/* Profile Edit Form */
 .profile-edit {
     width: 75%;
     padding: 20px;
@@ -86,11 +89,7 @@
     color: #333;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea,
-select {
+.input_field{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -100,7 +99,7 @@ select {
 
 .button-group {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
 }
 
 button {
@@ -123,17 +122,19 @@ button {
     color: white;
 }
 
-#footer{
+#footer {
     background-color: #f0f8f7;
     height: 300px;
     margin-top: 50px;
 }
-#footer_left{
+
+#footer_left {
     float: left;
     width: 30%;
     margin: 100px 0 0 100px;
 }
-#footer_right{
+
+#footer_right {
     float: right;
     width: 30%;
     margin: 100px 0 0 100px;

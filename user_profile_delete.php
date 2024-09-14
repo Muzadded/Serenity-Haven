@@ -30,8 +30,7 @@
     </div>
 
     <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
+        <div class="sidebar">
             <ul>
                 <li><a href="user_profile_edit.php">Edit Profile</a></li>
                 <li><a href="user_profile_delete.php" style="color: #399918; font-weight:bold">Delete Membership</a></li>
@@ -39,31 +38,28 @@
                 <li><a href="#">Terms & Conditions</a></li>
                 <li><a href="user_review.php">Review</a></li>
             </ul>
-        </aside>
-
-        <!-- Profile Edit Form -->
-        <main class="profile-edit">
+        </div>
+        <div class="profile-edit">
             <h2 style="color: #399918; font-weight:bold">Are you sure to delete your account?</h2>
-            <form action="#" method="POST">
+            <form action="" method="">
                 <div class="profile-pic">
                     <img src="assets/profile_icon.png" alt="Profile Picture"><br>
                 </div>
                 <br>
-                
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="rifats@gmail.com" required>
+                    <input type="email" id="email" name="email" placeholder="rifats@gmail.com" required class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="********" required>
+                    <input type="password" id="password" name="password" placeholder="********" required class="input_field">
                 </div>
                 <div class="button-group">
                     <button type="button" class="cancel-btn">Cancel</button>
                     <button type="submit" class="save-btn">Delete</button>
                 </div>
             </form>
-        </main>
+        </div>
     </div>
 
     <div id="footer">

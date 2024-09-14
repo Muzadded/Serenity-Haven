@@ -30,8 +30,8 @@
     </div>
 
     <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
+       
+        <div class="sidebar">
             <ul>
                 <li><a href="user_profile_edit.php">Edit Profile</a></li>
                 <li><a href="user_profile_delete.php" >Delete Membership</a></li>
@@ -39,12 +39,11 @@
                 <li><a href="#">Terms & Conditions</a></li>
                 <li><a href="user_review.php" style="color: #399918; font-weight:bold">Review</a></li>
             </ul>
-        </aside>
+        </div>
 
-        <!-- Profile Edit Form -->
-        <main class="comment-section">
+        <div class="comment-section">
             <h2>Give your Thoughts About Us</h2>
-            <form action="#" method="POST">
+            <form action="" method="">
                 <div class="form-group">
                     <label for="comment">Comment</label>
                     <textarea id="comment" name="comment" placeholder="Enter your email or comment"></textarea>
@@ -54,7 +53,7 @@
                     <button type="submit" class="send-btn">Send</button>
                 </div>
             </form>
-        </main>
+        </div>
     </div>
 
     <div id="footer">

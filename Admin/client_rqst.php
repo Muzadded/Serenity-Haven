@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <!-- Sidebar -->
     <div class="sidebar">
         <ul class="nav-links">
             <li><a href="user_info.php">Dashboard</a></li>
@@ -22,7 +21,6 @@
         </ul>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
         <div class="header">
             <h2>New Client Request</h2>
@@ -33,8 +31,7 @@
                 <img src="../assets/logo.jpg" alt="Profile Picture">
             </div>
         </div>
-
-        <!-- Client Request Table -->
+        
         <table class="client-request-table">
             <thead>
                 <tr>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/user_profile_edit.css">
+    <link rel="stylesheet" href="css/user_profile_edits.css">
     <title>Document</title>
 </head>
 
@@ -30,8 +30,7 @@
     </div>
 
     <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
+        <div class="sidebar">
             <ul>
                 <li><a href="user_profile_edit.php" style="color: #399918; font-weight:bold">Edit Profile</a></li>
                 <li><a href="user_profile_delete.php">Delete Membership</a></li>
@@ -39,41 +38,39 @@
                 <li><a href="#">Terms & Conditions</a></li>
                 <li><a href="user_review.php">Review</a></li>
             </ul>
-        </aside>
-
-        <!-- Profile Edit Form -->
-        <main class="profile-edit">
+        </div>
+        <div class="profile-edit">
             <h2>Edit profile</h2>
-            <form action="#" method="POST">
+            <form action="" method="">
                 <div class="profile-pic">
                     <img src="assets/profile_icon.png" alt="Profile Picture"><br>
                     <label for="profile">Change Profile Picture</label><br>
-                    <input type="file" placeholder="Upload a Picture">
+                    <input type="file" placeholder="Upload a Picture" class="input_field">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Rifat" required>
+                    <input type="text" id="name" name="name" placeholder="Rifat" required class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="rifats@gmail.com" required>
+                    <input type="email" id="email" name="email" placeholder="rifats@gmail.com" required class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" id="address" name="address" placeholder="Khilgaon, Dhaka" required>
+                    <input type="text" id="address" name="address" placeholder="Khilgaon, Dhaka" required class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="contact">Contact Number</label>
-                    <input type="text" id="contact" name="contact" placeholder="01234567891" required>
+                    <input type="text" id="contact" name="contact" placeholder="01234567891" required class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="health">Health Description</label>
-                    <input type="text" id="health" name="health" placeholder="Health Description">
+                    <input type="text" id="health" name="health" placeholder="Health Description" class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="service-plan">Your Service Plan</label>
-                    <select>
+                    <select class="input_field">
                         <option value="" disabled selected>Change your plan</option>
                         <option value="weekly">Weekly</option>
                         <option value="monthly">Monthly</option>
@@ -82,14 +79,14 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="********" required>
+                    <input type="password" id="password" name="password" placeholder="********" required class="input_field">
                 </div>
                 <div class="button-group">
                     <button type="button" class="cancel-btn">Cancel</button>
                     <button type="submit" class="save-btn">Save</button>
                 </div>
             </form>
-        </main>
+        </div>
     </div>
 
     <div id="footer">

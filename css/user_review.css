@@ -1,5 +1,4 @@
 #nav{
-    /* background-color: aquamarine; */
     height: 60px;
 }
 #left_nav{
@@ -34,8 +33,6 @@
     margin: 30px auto;
     margin-top: 150px;
 }
-
-/* Sidebar */
 .sidebar {
     width: 25%;
     background-color: #f0f8f7;

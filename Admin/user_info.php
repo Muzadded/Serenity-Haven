@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +7,7 @@
     <link rel="stylesheet" href="css/user_infos.css">
     <title>Document</title>
 </head>
-
 <body>
-    <!-- Sidebar -->
     <div class="sidebar">
         <ul class="nav-links">
             <li><a href="user_info.php" style="font-weight: bold;">Dashboard</a></li>
@@ -21,8 +18,6 @@
             <a class="btn btn-success login" href="../login.php" role="button">Log out</a>
         </ul>
     </div>
-
-    <!-- Main Content -->
     <div class="main-content">
         <div class="header">
             <h2>User Details</h2>
@@ -35,7 +30,6 @@
             
         </div>
 
-        <!-- Client Request Table -->
         <table class="client-request-table">
             <thead>
                 <tr>

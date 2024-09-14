@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <!-- Sidebar -->
     <div class="sidebar">
         <ul class="nav-links">
             <li><a href="user_info.php">Dashboard</a></li>
@@ -21,8 +20,6 @@
             <a class="btn btn-success login" href="../login.php" role="button">Log out</a>
         </ul>
     </div>
-
-    <!-- Main Content -->
     <div class="main-content">
         <div class="header">
             <h2>Donation List</h2>
@@ -33,8 +30,7 @@
                 <img src="../assets/logo.jpg" alt="Profile Picture">
             </div>
         </div>
-
-        <!-- Client Request Table -->
+        
         <table class="client-request-table">
             <thead>
                 <tr>
