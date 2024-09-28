@@ -55,7 +55,7 @@
 
 #our_plan{
     display: flex;
-    margin: 80px 100px 50px 22%;
+    margin: 80px 100px 50px 400px;
 }
 .plan_card{
     background-color: #329954;
@@ -73,7 +73,7 @@
     background-color: #8ddaa7;
 }
 #donation{
-    margin: 20px 30% 30px 32%;
+    margin: 20px 200px 30px 320px;
 }
 #footer{
     background-color:#f0f8f7;

@@ -71,6 +71,8 @@
     transition: box-shadow 0.3s ease;
     box-shadow: 2px 2px 2px #ffffff;
     flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .services_div:hover{
     box-shadow: 5px 5px 5px #888888;
@@ -90,6 +92,8 @@
     transition: box-shadow 0.3s ease;
     box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
     flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .meal_plan:hover{
     box-shadow: 8px 8px 8px #888888;
@@ -124,6 +128,8 @@
     transition: box-shadow 0.3s ease;
     box-shadow: 1px 1px 1px 1px rgba(5, 233, 77, 0.2);
     flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .sc_act:hover{
     box-shadow: 5px 5px 5px rgb(0,0,0,0.2);
