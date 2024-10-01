@@ -1,3 +1,41 @@
+<?php
+
+session_start();
+include('Connection.php');
+
+if (isset($_POST['submit'])) {
+    $login_email = $_POST['email'];
+    $login_pass = $_POST['password'];
+
+    $login_info = mysqli_query($conn, "SELECT* FROM users WHERE email = '$login_email'");
+
+    if (mysqli_num_rows($login_info) > 0) {
+
+        $row = mysqli_fetch_assoc($login_info);
+
+        if ($row['pass'] == $login_pass) {
+
+            $_SESSION['email'] = $login_email;
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['uname'] = $row['name'];
+            $_SESSION['age'] = $row['age'];
+            $_SESSION['address'] = $row['address'];
+            // $_SESSION['gender'] = $row['gender'];
+            // $_SESSION['phone'] = $row['phone'];
+            // $_SESSION['nid'] = $row['nid'];
+            header('Location: user_profile_edit.php');
+        } else {
+            $pass_match = 'Password Incorrect';
+        }
+    } else {
+        $email_match = 'User not found';
+    }
+}
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,19 +73,35 @@
                 <h1>Old Age Care Center</h1>
                 <p>Login to your account</p>
 
-                <form action="#">
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="riya@gmail.com" required>
+                    <input type="email" id="email" name="email" placeholder="riya@gmail.com" required value="<?php if (isset($email)) {
+                                                                                                                    echo $email;
+                                                                                                                } ?>">
 
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="********" required>
+                    <input type="password" id="password" name="password" placeholder="********" required value="<?php if (isset($password)) {
+                                                                                                                    echo $password;
+                                                                                                                } ?>">
 
                     <div class="remember-forgot">
                         <label><input type="checkbox" name="remember" checked> Remember me</label>
                         <a href="#">Forgot password?</a>
                     </div>
 
-                    <button type="submit" class="login-btn">Login</button>
+                    <button type="submit" class="login-btn" name="submit" value="submit">Login</button>
+                    <div>
+                        <span>
+                            <?php
+                            if (isset($email_match)) {
+                                echo $email_match;
+                            }elseif(isset($pass_match)){
+                                echo $pass_match;
+                            }
+                            ?>
+                        </span>
+                    </div>
                 </form>
 
                 <p class="sign-up">Don't have an account? <a href="register.php">Sign in</a></p>

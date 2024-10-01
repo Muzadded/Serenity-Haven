@@ -1,3 +1,40 @@
+<?php
+
+session_start();
+include('Connection.php');
+if (isset($_POST['submit'])) {
+
+    $_SESSION['name'] = $_POST['name'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['pass'] = $_POST['pass'];
+    $_SESSION['g_name'] = $_POST['g_name'];
+    $_SESSION['g_relation'] = $_POST['g_relation'];
+    $_SESSION['age'] = $_POST['age'];
+    $_SESSION['number'] = $_POST['number'];
+    $_SESSION['address'] = $_POST['address'];
+    $_SESSION['health_record'] = $_POST['health_record'];
+    $_SESSION['hobby'] = $_POST['hobby'];
+    $_SESSION['plan'] = $_POST['plan'];
+
+    $image_name = $_FILES['user_prof']['name'];
+    $image_tmp_name = $_FILES['user_prof']['tmp_name'];
+    $image_data = file_get_contents($image_tmp_name);
+
+    $_SESSION['image_name'] = $image_name;
+
+    $email = $_SESSION['email'];
+    $check_email = mysqli_query($conn, "SELECT *FROM users where email = '$email' ");
+    $email_count = mysqli_num_rows($check_email);
+
+    if ($email_count != 0) {
+        $email_match = 'Email Already Exist';
+    }else{
+        header('Location: meal_plan.php');
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,23 +68,30 @@
     <div class="container">
         <div class="registration-box">
             <h2>Registration</h2>
-            <form action="#">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <div class="left-column">
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="password" placeholder="Password" required>
-                        <input type="text" placeholder="Guardian Name" required>
-                        <input type="text" placeholder="Relation" required>
-                        <input type="number" placeholder="Age" required>
+                        <input type="text" placeholder="Name" required name="name">
+                        <input type="email" placeholder="Email" required name="email">
+                        <span>
+                            <?php
+                                if(isset($email_match)){
+                                    echo $email_match;
+                                }
+                            ?>
+                        </span>
+                        <input type="password" placeholder="Password" required name="pass">
+                        <input type="text" placeholder="Guardian Name" required name="g_name">
+                        <input type="text" placeholder="Relation" required name="g_relation">
+                        <input type="number" placeholder="Age" required name="age">
                     </div>
                     <div class="right-column">
-                        <input type="tel" placeholder="Contact Number" required>
-                        <input type="text" placeholder="Address" required>
-                        <input type="text" placeholder="Previous Health Records" required>
-                        <input type="file" placeholder="Upload a Picture">
-                        <input type="text" placeholder="Hobby">
-                        <select>
+                        <input type="tel" placeholder="Contact Number" required name="number">
+                        <input type="text" placeholder="Address" required name="address">
+                        <input type="text" placeholder="Previous Health Records" required name="health_record">
+                        <input type="file" placeholder="Upload a Picture" name="user_prof">
+                        <input type="text" placeholder="Hobby" name="hobby">
+                        <select name="plan">
                             <option value="" disabled selected>Choose your plan</option>
                             <option value="weekly">Weekly</option>
                             <option value="monthly">Monthly</option>
@@ -57,7 +101,7 @@
 
                 </div>
                 <div class="submit-section">
-                    <button type="submit" class="register-btn">Register</button>
+                    <button type="submit" class="register-btn" name="submit">Register</button>
                     <p>Already have an account? <a href="login.php">Log in</a></p>
                 </div>
             </form>

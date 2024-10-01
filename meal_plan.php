@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,70 +22,71 @@
 
 
 <style>
-        /* CSS to center the form */
-        form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    /* CSS to center the form */
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 8px;
+    }
 
-        textarea {
-            width: 100%;
-            max-width: 400px;
-            min-height: 150px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 15px;
-            font-size: 16px;
-        }
+    textarea {
+        width: 100%;
+        max-width: 400px;
+        min-height: 150px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
 
-        input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
 
 <body>
-<p align="center" style="margin-top:100px; font-weight:bold; font-size:50px; color: #1A3636">Choose Your Meal</p>
-    <div id="our_plan">
-        <div class="plan_card">
-            <p align="center" style="font-weight:800;font-size:30px">Meal Plan 1</p>
-            <p align="center" style="font-size:15px; font-weight:500;opacity:0.8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a class="btn join_btn" href="#" role="button">Select</a>
-        </div>
-        <div class="plan_card">
-            <p align="center" style="font-weight:800;font-size:30px">Meal Plan 2</p>
-            <p align="center" style="font-size:15px; font-weight:500;opacity:0.8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a class="btn join_btn" href="#" role="button">Select</a>
-        </div>
-        <div class="plan_card">
-            <p align="center" style="font-weight:800;font-size:30px">Meal Plan 3</p>
-            <p align="center" style="font-size:15px; font-weight:500;opacity:0.8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a class="btn join_btn" href="#" role="button">Select</a>
-        </div>
-
-    </div>
-    <form action="" method="POST">
-        <label for="message" style="font-weight:bold; font-size:30px; color: #1A3636">Any Instruction about your meal</label><br>
-        <textarea name="message" id="message" rows="10" cols="50" placeholder="Write here..."></textarea><br><br>
+    <p align="center" style="margin-top:100px; font-weight:bold; font-size:50px; color: #1A3636">Choose Your Meal</p>
+    <form action="reg_process.php" method="POST">
+        <label for="" style="font-weight:bold">Breakfast</label>
+        <select name="breakfast_meal" id="">
+            <option value="" disabled selected>Choose your Breakfast</option>
+            <option value="meal1">Meal plan 1</option>
+            <option value="meal2">Meal plan 1</option>
+            <option value="meal3">Meal plan 1</option>
+        </select>
+        <label for="" style="font-weight:bold">Lunch</label>
+        <select name="lunch_meal" id="">
+        <option value="" disabled selected>Choose your Lunch</option>
+            <option value="meal1">Meal plan 1</option>
+            <option value="meal2">Meal plan 1</option>
+            <option value="meal3">Meal plan 1</option>
+        </select>
+        <label for="" style="font-weight:bold">Dinner</label>
+        <select name="dinner_meal" id="">
+        <option value="" disabled selected>Choose your Dinner</option>
+            <option value="meal1">Meal plan 1</option>
+            <option value="meal2">Meal plan 1</option>
+            <option value="meal3">Meal plan 1</option>
+        </select>
+        <label for="message" style="font-weight:bold; font-size:30px; color: #1A3636; margin-top:100px">Any Instruction about your meal</label><br>
+        <textarea name="meal_message" id="message" rows="5" cols="50" placeholder="Write here..."></textarea><br><br>
         <input type="submit" class="btn btn-success" style="background-color: #329954" value="Confirm Registration">
     </form>
-    
+
 </body>
 
 </html>
