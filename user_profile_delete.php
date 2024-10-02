@@ -32,6 +32,7 @@
     <div class="container">
         <div class="sidebar">
             <ul>
+                <li><a href="user_dash.php" style="color: #399918; font-weight:bold">Dashboard</a></li>
                 <li><a href="user_profile_edit.php">Edit Profile</a></li>
                 <li><a href="user_profile_delete.php" style="color: #399918; font-weight:bold">Delete Membership</a></li>
                 <li><a href="#">Help</a></li>

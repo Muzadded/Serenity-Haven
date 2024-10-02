@@ -18,18 +18,25 @@ if (isset($_POST['submit'])) {
 
     $image_name = $_FILES['user_prof']['name'];
     $image_tmp_name = $_FILES['user_prof']['tmp_name'];
-    $image_data = file_get_contents($image_tmp_name);
+    //$image_data = file_get_contents($image_tmp_name);
+    $folder = 'profile/' . $image_name;
 
-    $_SESSION['image_name'] = $image_name;
+    if (move_uploaded_file($image_tmp_name, $folder)) {
+        $_SESSION['image_name'] = $image_name;
+        $_SESSION['image_tmp_name'] = $image_tmp_name;
+        $_SESSION['folder'] = $folder;
 
-    $email = $_SESSION['email'];
-    $check_email = mysqli_query($conn, "SELECT *FROM users where email = '$email' ");
-    $email_count = mysqli_num_rows($check_email);
+        $email = $_SESSION['email'];
+        $check_email = mysqli_query($conn, "SELECT *FROM users where email = '$email' ");
+        $email_count = mysqli_num_rows($check_email);
 
-    if ($email_count != 0) {
-        $email_match = 'Email Already Exist';
-    }else{
-        header('Location: meal_plan.php');
+        if ($email_count != 0) {
+            $email_match = 'Email Already Exist';
+        } else {
+            header('Location: meal_plan.php');
+        }
+    } else {
+        echo "Image Upload failed";
     }
 }
 
@@ -75,9 +82,9 @@ if (isset($_POST['submit'])) {
                         <input type="email" placeholder="Email" required name="email">
                         <span>
                             <?php
-                                if(isset($email_match)){
-                                    echo $email_match;
-                                }
+                            if (isset($email_match)) {
+                                echo $email_match;
+                            }
                             ?>
                         </span>
                         <input type="password" placeholder="Password" required name="pass">

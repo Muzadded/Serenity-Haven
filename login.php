@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
             // $_SESSION['gender'] = $row['gender'];
             // $_SESSION['phone'] = $row['phone'];
             // $_SESSION['nid'] = $row['nid'];
-            header('Location: user_profile_edit.php');
+            header('Location: user_dash.php');
         } else {
             $pass_match = 'Password Incorrect';
         }
@@ -96,7 +96,7 @@ if (isset($_POST['submit'])) {
                             <?php
                             if (isset($email_match)) {
                                 echo $email_match;
-                            }elseif(isset($pass_match)){
+                            } elseif (isset($pass_match)) {
                                 echo $pass_match;
                             }
                             ?>

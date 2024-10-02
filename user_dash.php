@@ -45,7 +45,7 @@ $profile = $row['image'];
         <div class="sidebar">
             <ul>
                 <li><a href="user_dash.php" style="color: #399918; font-weight:bold">Dashboard</a></li>
-                <li><a href="user_profile_edit.php" style="color: #399918; font-weight:bold">Edit Profile</a></li>
+                <li><a href="user_profile_edit.php">Edit Profile</a></li>
                 <li><a href="user_profile_delete.php">Delete Membership</a></li>
                 <li><a href="#">Help</a></li>
                 <li><a href="#">Terms & Conditions</a></li>
@@ -57,46 +57,31 @@ $profile = $row['image'];
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
                 <div class="profile-pic">
                     <?php echo '<img src="profile/' . $profile . '" alt="Profile Picture">' ?><br>
-                    <label for="profile">Change Profile Picture</label><br>
-                    <input type="file" placeholder="Upload a Picture" class="input_field">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Rifat" required class="input_field">
+                    <input type="text" id="name" name="name" placeholder="<?php echo $row['name'] ?>" readonly class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="rifats@gmail.com" required class="input_field">
+                    <input type="email" id="email" name="email" placeholder="rifats@gmail.com" readonly class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" id="address" name="address" placeholder="Khilgaon, Dhaka" required class="input_field">
+                    <input type="text" id="address" name="address" placeholder="Khilgaon, Dhaka" readonly class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="contact">Contact Number</label>
-                    <input type="text" id="contact" name="contact" placeholder="01234567891" required class="input_field">
+                    <input type="text" id="contact" name="contact" placeholder="01234567891" readonly class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="health">Health Description</label>
-                    <input type="text" id="health" name="health" placeholder="Health Description" class="input_field">
+                    <input type="text" id="health" name="health" placeholder="Health Description" readonly class="input_field">
                 </div>
                 <div class="form-group">
-                    <label for="service-plan">Your Service Plan</label>
-                    <select class="input_field">
-                        <option value="" disabled selected>Change your plan</option>
-                        <option value="weekly">Weekly</option>
-                        <option value="monthly">Monthly</option>
-                        <option value="yearly">Yearly</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="********" required class="input_field">
-                </div>
-                <div class="button-group">
-                    <button type="button" class="cancel-btn">Cancel</button>
-                    <button type="submit" class="save-btn">Save</button>
+                    <label for="name">Plan</label>
+                    <input type="text" id="name" name="name" placeholder="<?php echo $row['name'] ?>" readonly class="input_field">
                 </div>
             </form>
         </div>
