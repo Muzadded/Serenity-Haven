@@ -27,16 +27,16 @@ $profile = $row['image'];
             <img src="assets/logo.jpg" style="width: 50px; height: 50px;" alt=""><span style="margin-left:10px ;font-size: 20px; font-weight: bold; color: #399918;">Serenity Haven</span>
         </div>
         <div id="right_nav">
-            <div id="right_nav_link">
+            <!-- <div id="right_nav_link">
                 <a class="nav_link" href="index.php" style="color: #399918;">Home</a>
                 <a class="nav_link" href="about_us.php">About Us</a>
                 <a class="nav_link" href="our_services.php">Our Services</a>
                 <a class="nav_link" href="plans.php">Plans & Donate</a>
                 <a class="nav_link" href="plans.php">Dashboard</a>
-            </div>
+            </div> -->
             <div id="right_nav_btn">
                 <a class="btn btn-success login" href="login.php" role="button">Log out</a>
-                <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a>
+                <!-- <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a> -->
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@ $profile = $row['image'];
             </ul>
         </div>
         <div class="profile-edit">
-            <h2>Edit profile</h2>
+            <h2>User profile</h2>
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
                 <div class="profile-pic">
                     <?php echo '<img src="profile/' . $profile . '" alt="Profile Picture">' ?><br>
@@ -64,24 +64,48 @@ $profile = $row['image'];
                     <input type="text" id="name" name="name" placeholder="<?php echo $row['name'] ?>" readonly class="input_field">
                 </div>
                 <div class="form-group">
+                    <label for="name">age</label>
+                    <input type="text" id="name" name="name" placeholder="<?php echo $row['age'] ?>" readonly class="input_field">
+                </div>
+                <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="rifats@gmail.com" readonly class="input_field">
-                </div>
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" placeholder="Khilgaon, Dhaka" readonly class="input_field">
-                </div>
-                <div class="form-group">
-                    <label for="contact">Contact Number</label>
-                    <input type="text" id="contact" name="contact" placeholder="01234567891" readonly class="input_field">
+                    <input type="email" id="email" name="email" placeholder="<?php echo $row['email'] ?>" readonly class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="health">Health Description</label>
-                    <input type="text" id="health" name="health" placeholder="Health Description" readonly class="input_field">
+                    <input type="text" id="health" name="health" placeholder="<?php echo $row['health_record'] ?>" readonly class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="name">Guardian Name</label>
+                    <input type="text" id="name" name="name" placeholder="<?php echo $row['g_name'] ?>" readonly class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="<?php echo $row['address'] ?>" readonly class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" name="contact" placeholder="<?php echo $row['number'] ?>" readonly class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="email">Hobby</label>
+                    <input type="email" id="email" name="email" placeholder="<?php echo $row['hobby'] ?>" readonly class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="address">Breakfast</label>
+                    <input type="text" id="address" name="address" placeholder="<?php echo $row['breakfast'] ?>" readonly class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="contact">Lunch</label>
+                    <input type="text" id="contact" name="contact" placeholder="<?php echo $row['lunch'] ?>" readonly class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="health">Dinner</label>
+                    <input type="text" id="health" name="health" placeholder="<?php echo $row['dinner'] ?>" readonly class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="name">Plan</label>
-                    <input type="text" id="name" name="name" placeholder="<?php echo $row['name'] ?>" readonly class="input_field">
+                    <input type="text" id="name" name="name" placeholder="<?php echo $row['plan'] ?>" readonly class="input_field">
                 </div>
             </form>
         </div>
