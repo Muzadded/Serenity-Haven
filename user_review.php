@@ -16,15 +16,15 @@
         </div>
         <div id="right_nav">
             <div id="right_nav_link">
-                <a class="nav_link" href="index.php" style="color: #399918;">Home</a>
+                <!-- <a class="nav_link" href="index.php" style="color: #399918;">Home</a>
                 <a class="nav_link" href="about_us.php">About Us</a>
                 <a class="nav_link" href="our_services.php">Our Services</a>
                 <a class="nav_link" href="plans.php">Plans & Donate</a>
-                <a class="nav_link" href="plans.php">Dashboard</a>
+                <a class="nav_link" href="plans.php">Dashboard</a> -->
             </div>
             <div id="right_nav_btn">
-                <a class="btn btn-success login" href="login.php" role="button">Log out</a>
-                <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a>
+                <a class="btn btn-success login" href="logout.php" role="button">Log out</a>
+                <!-- <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a> -->
             </div>
         </div>
     </div>
@@ -33,11 +33,9 @@
 
         <div class="sidebar">
             <ul>
-                <li><a href="user_dash.php" style="color: #399918; font-weight:bold">Dashboard</a></li>
+                <li><a href="user_dash.php">Dashboard</a></li>
                 <li><a href="user_profile_edit.php">Edit Profile</a></li>
                 <li><a href="user_profile_delete.php">Delete Membership</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
                 <li><a href="user_review.php" style="color: #399918; font-weight:bold">Review</a></li>
             </ul>
         </div>

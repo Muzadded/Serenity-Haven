@@ -35,7 +35,7 @@ $profile = $row['image'];
                 <a class="nav_link" href="plans.php">Dashboard</a>
             </div> -->
             <div id="right_nav_btn">
-                <a class="btn btn-success login" href="login.php" role="button">Log out</a>
+                <a class="btn btn-success login" href="logout.php" role="button">Log out</a>
                 <!-- <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a> -->
             </div>
         </div>
@@ -47,8 +47,6 @@ $profile = $row['image'];
                 <li><a href="user_dash.php" style="color: #399918; font-weight:bold">Dashboard</a></li>
                 <li><a href="user_profile_edit.php">Edit Profile</a></li>
                 <li><a href="user_profile_delete.php">Delete Membership</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
                 <li><a href="user_review.php">Review</a></li>
             </ul>
         </div>

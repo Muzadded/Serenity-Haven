@@ -1,3 +1,39 @@
+<?php
+include('Connection.php');
+session_start();
+
+$id = $_SESSION['user_id'];
+$sql = "SELECT* from users WHERE id = $id";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+$profile = $row['image'];
+
+if (isset($_POST['submit'])) {
+    $login_email = $_POST['email'];
+    $login_pass = $_POST['password'];
+
+    $login_info = mysqli_query($conn, "SELECT* FROM users WHERE email = '$login_email'");
+
+    if (mysqli_num_rows($login_info) > 0) {
+
+        $row = mysqli_fetch_assoc($login_info);
+
+        if ($row['pass'] == $login_pass) {
+
+            $sql = "DELETE FROM users WHERE id = $id";
+            $delete = mysqli_query($conn, $sql);
+            if ($delete) {
+                header('Location: logout.php');
+            }
+        } else {
+            $pass_match = 'Password Incorrect';
+        }
+    } else {
+        $email_match = 'User not found';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,16 +51,16 @@
             <img src="assets/logo.jpg" style="width: 50px; height: 50px;" alt=""><span style="margin-left:10px ;font-size: 20px; font-weight: bold; color: #399918;">Serenity Haven</span>
         </div>
         <div id="right_nav">
-            <div id="right_nav_link">
+            <!-- <div id="right_nav_link">
                 <a class="nav_link" href="index.php" style="color: #399918;">Home</a>
                 <a class="nav_link" href="about_us.php">About Us</a>
                 <a class="nav_link" href="our_services.php">Our Services</a>
                 <a class="nav_link" href="plans.php">Plans & Donate</a>
                 <a class="nav_link" href="plans.php">Dashboard</a>
-            </div>
+            </div> -->
             <div id="right_nav_btn">
-                <a class="btn btn-success login" href="login.php" role="button">Log out</a>
-                <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a>
+                <a class="btn btn-success login" href="logout.php" role="button">Log out</a>
+                <!-- <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a> -->
             </div>
         </div>
     </div>
@@ -32,19 +68,17 @@
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="user_dash.php" style="color: #399918; font-weight:bold">Dashboard</a></li>
+                <li><a href="user_dash.php">Dashboard</a></li>
                 <li><a href="user_profile_edit.php">Edit Profile</a></li>
                 <li><a href="user_profile_delete.php" style="color: #399918; font-weight:bold">Delete Membership</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
                 <li><a href="user_review.php">Review</a></li>
             </ul>
         </div>
         <div class="profile-edit">
             <h2 style="color: #399918; font-weight:bold">Are you sure to delete your account?</h2>
-            <form action="" method="">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
                 <div class="profile-pic">
-                    <img src="assets/profile_icon.png" alt="Profile Picture"><br>
+                    <?php echo '<img src="profile/' . $profile . '" alt="Profile Picture">' ?>
                 </div>
                 <br>
                 <div class="form-group">
@@ -56,8 +90,7 @@
                     <input type="password" id="password" name="password" placeholder="********" required class="input_field">
                 </div>
                 <div class="button-group">
-                    <button type="button" class="cancel-btn">Cancel</button>
-                    <button type="submit" class="save-btn">Delete</button>
+                    <button type="submit" class="save-btn" name="submit">Delete</button>
                 </div>
             </form>
         </div>

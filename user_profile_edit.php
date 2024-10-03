@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
         </div>
         <div id="right_nav">
             <div id="right_nav_btn">
-                <a class="btn btn-success login" href="login.php" role="button">Log out</a>
+                <a class="btn btn-success login" href="logout.php" role="button">Log out</a>
                 <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a>
             </div>
         </div>
@@ -88,8 +88,6 @@ if (isset($_POST['submit'])) {
                 <li><a href="user_dash.php">Dashboard</a></li>
                 <li><a href="user_profile_edit.php" style="color: #399918; font-weight:bold">Edit Profile</a></li>
                 <li><a href="user_profile_delete.php">Delete Membership</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
                 <li><a href="user_review.php">Review</a></li>
             </ul>
         </div>
