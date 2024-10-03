@@ -62,21 +62,21 @@ session_start();
     <p align="center" style="margin-top:100px; font-weight:bold; font-size:50px; color: #1A3636">Choose Your Meal</p>
     <form action="reg_process.php" method="POST">
         <label for="" style="font-weight:bold">Breakfast</label>
-        <select name="breakfast_meal" id="">
+        <select name="breakfast_meal" required>
             <option value="" disabled selected>Choose your Breakfast</option>
             <option value="meal1">Meal plan 1</option>
             <option value="meal2">Meal plan 1</option>
             <option value="meal3">Meal plan 1</option>
         </select>
         <label for="" style="font-weight:bold">Lunch</label>
-        <select name="lunch_meal" id="">
+        <select name="lunch_meal" required>
         <option value="" disabled selected>Choose your Lunch</option>
             <option value="meal1">Meal plan 1</option>
             <option value="meal2">Meal plan 1</option>
             <option value="meal3">Meal plan 1</option>
         </select>
         <label for="" style="font-weight:bold">Dinner</label>
-        <select name="dinner_meal" id="">
+        <select name="dinner_meal" required>
         <option value="" disabled selected>Choose your Dinner</option>
             <option value="meal1">Meal plan 1</option>
             <option value="meal2">Meal plan 1</option>

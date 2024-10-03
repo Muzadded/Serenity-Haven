@@ -8,6 +8,54 @@ $sql = "SELECT* from users WHERE id = $id";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $profile = $row['image'];
+
+if (isset($_POST['submit'])) {
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
+    $g_name = $_POST['g_name'];
+    // $g_relation = $_POST['g_relation'];
+    $age = $_POST['age'];
+    $number = $_POST['number'];
+    $address = $_POST['address'];
+    $healthRecord = $_POST['health'];
+    $hobby = $_POST['hobby'];
+    $plan = $_POST['plan'];
+    $breakfast = $_POST['breakfast'];
+    $lunch = $_POST['lunch'];
+    $dinner = $_POST['dinner'];
+
+    if ($plan == "weekly") {
+        $payment = 3000;
+        echo "3000";
+    } elseif ($plan == "monthly") {
+        $payment = 9000;
+        echo "9000";
+    } elseif ($plan == "yearly") {
+        $payment = 90000;
+        echo "90000";
+    }
+
+    $check_email = mysqli_query($conn, "SELECT *FROM users where email = '$email' AND id != $id");
+    $email_count = mysqli_num_rows($check_email);
+
+    if ($email_count != 0) {
+        $email_match = 'Email Already Exist';
+    } else {
+        $update = ("UPDATE users SET
+        name = '$name',email = '$email',pass = '$pass',g_name = '$g_name',age = '$age',number = '$number',address = '$address',health_record = '$healthRecord',
+        hobby = '$hobby',plan = '$plan',breakfast = '$breakfast',lunch = '$lunch',dinner = '$dinner',payment = '$payment'
+        WHERE id = $id");
+
+        if (mysqli_query($conn, $update)) {
+
+            header('Location: user_dash.php');
+        } else {
+            echo 'Query Error: ' . mysqli_error($conn);
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,13 +75,6 @@ $profile = $row['image'];
             <img src="assets/logo.jpg" style="width: 50px; height: 50px;" alt=""><span style="margin-left:10px ;font-size: 20px; font-weight: bold; color: #399918;">Serenity Haven</span>
         </div>
         <div id="right_nav">
-            <div id="right_nav_link">
-                <a class="nav_link" href="index.php" style="color: #399918;">Home</a>
-                <a class="nav_link" href="about_us.php">About Us</a>
-                <a class="nav_link" href="our_services.php">Our Services</a>
-                <a class="nav_link" href="plans.php">Plans & Donate</a>
-                <a class="nav_link" href="plans.php">Dashboard</a>
-            </div>
             <div id="right_nav_btn">
                 <a class="btn btn-success login" href="login.php" role="button">Log out</a>
                 <a class="btn btn-success contact_btn" href="contact_us.php" role="button">Contact Us</a>
@@ -44,7 +85,7 @@ $profile = $row['image'];
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="user_dash.php" style="color: #399918; font-weight:bold">Dashboard</a></li>
+                <li><a href="user_dash.php">Dashboard</a></li>
                 <li><a href="user_profile_edit.php" style="color: #399918; font-weight:bold">Edit Profile</a></li>
                 <li><a href="user_profile_delete.php">Delete Membership</a></li>
                 <li><a href="#">Help</a></li>
@@ -57,33 +98,77 @@ $profile = $row['image'];
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
                 <div class="profile-pic">
                     <?php echo '<img src="profile/' . $profile . '" alt="Profile Picture">' ?><br>
-                    <label for="profile">Change Profile Picture</label><br>
-                    <input type="file" placeholder="Upload a Picture" class="input_field">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Rifat" required class="input_field">
+                    <input type="text" id="name" name="name" value="<?php echo $row['name'] ?>" required class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="name">age</label>
+                    <input type="text" id="name" name="age" value="<?php echo $row['age'] ?>" required class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="rifats@gmail.com" required class="input_field">
-                </div>
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" placeholder="Khilgaon, Dhaka" required class="input_field">
-                </div>
-                <div class="form-group">
-                    <label for="contact">Contact Number</label>
-                    <input type="text" id="contact" name="contact" placeholder="01234567891" required class="input_field">
+                    <input type="email" id="email" name="email" value="<?php echo $row['email'] ?>" required class="input_field">
+                    <span style="color:red">
+                        <?php
+                        if (isset($email_match)) {
+                            echo $email_match;
+                        }
+                        ?>
+                    </span>
                 </div>
                 <div class="form-group">
                     <label for="health">Health Description</label>
-                    <input type="text" id="health" name="health" placeholder="Health Description" class="input_field">
+                    <input type="text" id="health" name="health" value="<?php echo $row['health_record'] ?>" required class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="name">Guardian Name</label>
+                    <input type="text" id="name" name="g_name" value="<?php echo $row['g_name'] ?>" required class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" value="<?php echo $row['address'] ?>" required class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" name="number" value="<?php echo $row['number'] ?>" required class="input_field">
+                </div>
+                <div class="form-group">
+                    <label for="email">Hobby</label>
+                    <input type="text" id="email" name="hobby" value="<?php echo $row['hobby'] ?>" required class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="service-plan">Your Service Plan</label>
-                    <select class="input_field">
+                    <select name="breakfast" class="input_field" required>
+                        <option value="" disabled selected>Choose your Breakfast</option>
+                        <option value="meal1">Meal plan 1</option>
+                        <option value="meal2">Meal plan 1</option>
+                        <option value="meal3">Meal plan 1</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="service-plan">Your Service Plan</label>
+                    <select name="lunch" class="input_field" required>
+                        <option value="" disabled selected>Choose your Lunch</option>
+                        <option value="meal1">Meal plan 1</option>
+                        <option value="meal2">Meal plan 1</option>
+                        <option value="meal3">Meal plan 1</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="service-plan">Your Service Plan</label>
+                    <select name="dinner" class="input_field" required>
+                        <option value="" disabled selected>Choose your Dinner</option>
+                        <option value="meal1">Meal plan 1</option>
+                        <option value="meal2">Meal plan 1</option>
+                        <option value="meal3">Meal plan 1</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="service-plan">Your Service Plan</label>
+                    <select name="plan" class="input_field" required>
                         <option value="" disabled selected>Change your plan</option>
                         <option value="weekly">Weekly</option>
                         <option value="monthly">Monthly</option>
@@ -92,11 +177,10 @@ $profile = $row['image'];
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="********" required class="input_field">
+                    <input type="text" id="password" name="pass" value="<?php echo $row['pass'] ?>" required class="input_field">
                 </div>
                 <div class="button-group">
-                    <button type="button" class="cancel-btn">Cancel</button>
-                    <button type="submit" class="save-btn">Save</button>
+                    <button type="submit" class="save-btn" name="submit">Save</button>
                 </div>
             </form>
         </div>
