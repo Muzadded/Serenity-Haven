@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/abouts_us.css?v=<?php echo time(); ?>">
     <title>About Us</title>
 </head>
+
 <body>
     <div id="nav">
         <div id="left_nav">
@@ -32,10 +34,10 @@
 
     <div id="learn_more">
         <div id="learn_more_left">
-            <p style="font-size: 20px; opacity: 0.8; margin-top: 40px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi nobis blanditiis nesciunt sit porro expedita? 
-                Doloremque atque voluptas eius error debitis impedit non animi, hic itaque quia possimus 
-                sapiente officiis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore dolor 
-                nulla voluptatibus nihil animi provident nostrum tenetur exercitationem consequatur quaerat corporis 
+            <p style="font-size: 20px; opacity: 0.8; margin-top: 40px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi nobis blanditiis nesciunt sit porro expedita?
+                Doloremque atque voluptas eius error debitis impedit non animi, hic itaque quia possimus
+                sapiente officiis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore dolor
+                nulla voluptatibus nihil animi provident nostrum tenetur exercitationem consequatur quaerat corporis
                 fugiat aperiam blanditiis, rerum error. Ipsum itaque magni veritatis!</p>
         </div>
 
@@ -44,45 +46,45 @@
         </div>
 
         <div>
-            
+
             <p>.</p>
-            
+
         </div>
     </div>
     <h3 align="center" style="font-weight: 500;">Meet Out Care Givers</h3>
     <div id="care_giver">
-       
+
         <div id="care_giver_slot1">
             <div class="givers">
                 <img src="assets/doctors_img1.jpg" alt="">
                 <p style="font-size: 20px; font-weight: bold; margin:8px 0 0 5px ;">John Doe</p>
                 <p style="font-size: 15px; font-weight: 500; margin:0px 0 8px 5px ;">Staff</p>
-                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in, 
-                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt 
+                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in,
+                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt
                     vero adipisci ea, autem accusamus nihil ad!</p>
             </div>
             <div class="givers">
                 <img src="assets/doctors_img2.jpg" alt="">
                 <p style="font-size: 20px; font-weight: bold; margin:8px 0 0 5px ;">John Doe</p>
                 <p style="font-size: 15px; font-weight: 500; margin:0px 0 8px 5px ;">Staff</p>
-                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in, 
-                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt 
+                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in,
+                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt
                     vero adipisci ea, autem accusamus nihil ad!</p>
             </div>
             <div class="givers">
                 <img src="assets/doctors_img3.jpg" alt="">
                 <p style="font-size: 20px; font-weight: bold; margin:8px 0 0 5px ;">John Doe</p>
                 <p style="font-size: 15px; font-weight: 500; margin:0px 0 8px 5px ;">Staff</p>
-                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in, 
-                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt 
+                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in,
+                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt
                     vero adipisci ea, autem accusamus nihil ad!</p>
             </div>
             <div class="givers">
                 <img src="assets/doctors_img4.jpg" alt="">
                 <p style="font-size: 20px; font-weight: bold; margin:8px 0 0 5px ;">John Doe</p>
                 <p style="font-size: 15px; font-weight: 500; margin:0px 0 8px 5px ;">Staff</p>
-                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in, 
-                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt 
+                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in,
+                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt
                     vero adipisci ea, autem accusamus nihil ad!</p>
             </div>
         </div>
@@ -91,32 +93,32 @@
                 <img src="assets/doctors_img5.jpg" alt="">
                 <p style="font-size: 20px; font-weight: bold; margin:8px 0 0 5px ;">John Doe</p>
                 <p style="font-size: 15px; font-weight: 500; margin:0px 0 8px 5px ;">Staff</p>
-                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in, 
-                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt 
+                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in,
+                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt
                     vero adipisci ea, autem accusamus nihil ad!</p>
             </div>
             <div class="givers">
                 <img src="assets/doctors_img6.jpg" alt="">
                 <p style="font-size: 20px; font-weight: bold; margin:8px 0 0 5px ;">John Doe</p>
                 <p style="font-size: 15px; font-weight: 500; margin:0px 0 8px 5px ;">Staff</p>
-                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in, 
-                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt 
+                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in,
+                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt
                     vero adipisci ea, autem accusamus nihil ad!</p>
             </div>
             <div class="givers">
                 <img src="assets/doctors_img7.jpg" alt="">
                 <p style="font-size: 20px; font-weight: bold; margin:8px 0 0 5px ;">John Doe</p>
                 <p style="font-size: 15px; font-weight: 500; margin:0px 0 8px 5px ;">Staff</p>
-                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in, 
-                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt 
+                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in,
+                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt
                     vero adipisci ea, autem accusamus nihil ad!</p>
             </div>
             <div class="givers">
                 <img src="assets/doctors_img8.jpg" alt="">
                 <p style="font-size: 20px; font-weight: bold; margin:8px 0 0 5px ;">John Doe</p>
                 <p style="font-size: 15px; font-weight: 500; margin:0px 0 8px 5px ;">Staff</p>
-                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in, 
-                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt 
+                <p style="font-size: 15px;  opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laudantium in,
+                    libero magni voluptate reprehenderit ab vitae culpa laborum quia, quos incidunt
                     vero adipisci ea, autem accusamus nihil ad!</p>
             </div>
         </div>
@@ -124,7 +126,7 @@
     <div id="contact_div">
         <p style="font-size: 30px; color: white; font-weight: bold;padding-top:30px ; padding-left: 30px;">Why Choose Us</p>
         <p style="padding-left: 30px; opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet exercitationem aliquam debitis laborum mollitia optio dolorum culpa quae sunt quisquam nemo eos sint corrupti quasi, excepturi voluptas veritatis neque nulla.</p>
-        <button class="btn" style="background-color: white; margin-left: 30px; font-weight: 500;">Contact Us</button>
+        <a class="btn btn-light" href="contact_us.php" role="button" style="margin-left:40px">Contact Us</a>
     </div>
 
     <div id="footer">
@@ -164,4 +166,5 @@
         </div>
     </div>
 </body>
+
 </html>

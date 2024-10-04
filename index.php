@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/homepage.css?v=<?php echo time(); ?>">
     <title>Home Page</title>
 </head>
+
 <body>
     <div id="nav">
         <div id="left_nav">
@@ -28,7 +30,6 @@
     <div id="wallpaper_div">
         <img src="assets/senior+women+at+an+assisted+living+facility.jpg" alt="">
         <p>Show Love, Support & <br>Comfort the Older</p>
-        <button class="btn btn-success">Learn More</button>
     </div>
     <div id="about_us">
         <div id="abt_left">
@@ -43,7 +44,7 @@
             <div id="abt_right_content">
                 <p style="font-size: 30px; font-weight: 500;">About Us</p>
                 <p style="opacity: 0.8;">At the Serenity Haven, We prioritize the well-being and dignity of every individual through our holistic elder care approach. </p>
-                
+
                 <table style="margin-top:10px ;">
                     <tr>
                         <td><img class="cheakbox_icon" src="assets/cheakbox_icon.png" alt=""><span style="opacity: 0.8;">Comprehensive Cave</span></td>
@@ -56,11 +57,11 @@
                     </tr>
                 </table>
                 <p style="margin-top: 20px; opacity: 0.8;">To learn more about us click the button below</p>
-                <a class="btn btn-success" href="#" role="button">Learn More</a>
+                <a class="btn btn-success" href="about_us.php" role="button">Learn More</a>
             </div>
-           
+
         </div>
-       
+
     </div>
     <h3 align="center">Our Services</h3>
     <div id="service">
@@ -71,34 +72,34 @@
         </div>
         <div class="services_div">
             <img src="assets/meal.jpg" class="service_icon" alt="">
-            <p class="service_title"style="font-weight: 500;">Nutritious Meals</p>
-            <p class="service_det"style="opacity: 0.8; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit inventore atque ullam, tempore voluptate illo, consectetur placeat optio officiis quasi doloremque ipsum reprehenderit suscipit corrupti id assumenda, nobis numquam pariatur?</p>
+            <p class="service_title" style="font-weight: 500;">Nutritious Meals</p>
+            <p class="service_det" style="opacity: 0.8; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit inventore atque ullam, tempore voluptate illo, consectetur placeat optio officiis quasi doloremque ipsum reprehenderit suscipit corrupti id assumenda, nobis numquam pariatur?</p>
         </div>
         <div class="services_div">
             <img src="assets/medical.jpg" class="service_icon" alt="">
-            <p class="service_title"style="font-weight: 500;">Doctor Services</p>
-            <p class="service_det"style="opacity: 0.8; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit inventore atque ullam, tempore voluptate illo, consectetur placeat optio officiis quasi doloremque ipsum reprehenderit suscipit corrupti id assumenda, nobis numquam pariatur?</p>
+            <p class="service_title" style="font-weight: 500;">Doctor Services</p>
+            <p class="service_det" style="opacity: 0.8; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit inventore atque ullam, tempore voluptate illo, consectetur placeat optio officiis quasi doloremque ipsum reprehenderit suscipit corrupti id assumenda, nobis numquam pariatur?</p>
         </div>
         <div class="services_div">
             <img src="assets/trainer.jpg" class="service_icon" alt="">
-            <p class="service_title"style="font-weight: 500;">Skilled Exercise Trainer</p>
-            <p class="service_det"style="opacity: 0.8; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit inventore atque ullam, tempore voluptate illo, consectetur placeat optio officiis quasi doloremque ipsum reprehenderit suscipit corrupti id assumenda, nobis numquam pariatur?</p>
+            <p class="service_title" style="font-weight: 500;">Skilled Exercise Trainer</p>
+            <p class="service_det" style="opacity: 0.8; font-size: 15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit inventore atque ullam, tempore voluptate illo, consectetur placeat optio officiis quasi doloremque ipsum reprehenderit suscipit corrupti id assumenda, nobis numquam pariatur?</p>
         </div>
     </div>
-    
-    <div id="review">
+
+    <!-- <div id="review">
         <h3 align="center" style="padding-top: 30px;">Client Reviews</h3>
-        <p style="margin: 3% 30% 1% 30%; opacity: 0.8;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, architecto soluta, facere commodi nesciunt itaque mollitia nisi recusandae temporibus voluptatibus maiores cupiditate deleniti, veniam assumenda. Quibusdam illo corrupti a earum.</p>
+        <p style="margin: 0; opacity: 0.8;">?></p>
         <img src="assets/profile_icon.png" alt="" id="profile_icon">
         <p align="center" style="margin-bottom:0;font-weight: 500;">Rifat Hasan</p>
         <p align="center" style="margin-top:0 ;font-size: 13px; opacity: 0.8;">ABC Software</p>
-    </div>
+
+    </div> -->
 
     <div id="learn_more">
         <div id="learn_more_left">
             <p style="font-size: 45px; font-weight: 500;">The Best Old Age Care Center For You</p>
             <p style="font-size: 20px; opacity: 0.8;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore dolor nulla voluptatibus nihil animi provident nostrum tenetur exercitationem consequatur quaerat corporis fugiat aperiam blanditiis, rerum error. Ipsum itaque magni veritatis!</p>
-            <button class="btn btn-success">Learn More</button>
         </div>
 
         <div id="learn_more_right">
@@ -106,16 +107,16 @@
         </div>
 
         <div>
-            
+
             <p>.</p>
-            
+
         </div>
     </div>
 
     <div id="contact_div">
         <p style="font-size: 30px; color: white; font-weight: bold;padding-top:30px ; padding-left: 30px;">Looking for a Better Care?</p>
         <p style="padding-left: 30px; opacity: 0.8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet exercitationem aliquam debitis laborum mollitia optio dolorum culpa quae sunt quisquam nemo eos sint corrupti quasi, excepturi voluptas veritatis neque nulla.</p>
-        <button class="btn" style="background-color: white; margin-left: 30px; font-weight: 500;">Contact Us</button>
+        <a class="btn btn-light" href="contact_us.php" role="button" style="margin-left:40px">Contact Us</a>
     </div>
 
     <div id="footer">
@@ -154,6 +155,7 @@
             </table>
         </div>
     </div>
-    
+
 </body>
+
 </html>

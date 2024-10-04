@@ -10,8 +10,11 @@
 
         $insert = "INSERT INTO user_comment (user_id,comment) VALUES ('$id','$comment')";
         if (mysqli_query($conn, $insert)) {
-
-            $sent_message = "Message Sent Successfully";
+            echo "<script>
+            if (confirm('Message Sent Successfully')) {
+                window.location.href = 'user_review.php';
+            }
+        </script>";
         } else {
             echo 'Query Error: ' . mysqli_query($conn, $insert);
         }

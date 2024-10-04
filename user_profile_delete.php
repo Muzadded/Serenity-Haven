@@ -23,13 +23,17 @@ if (isset($_POST['submit'])) {
             $sql = "DELETE FROM users WHERE id = $id";
             $delete = mysqli_query($conn, $sql);
             if ($delete) {
-                header('Location: logout.php');
+                echo "<script>
+        if (confirm('Your Account is Deleted')) {
+            window.location.href = 'login.php';
+        }
+    </script>";
             }
         } else {
             $pass_match = 'Password Incorrect';
         }
     } else {
-        $email_match = 'User not found';
+        $email_match = 'Wrong Email';
     }
 }
 ?>
@@ -88,6 +92,16 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="password" required class="input_field">
+                    <span style="color:red">
+                        <?php
+                        if (isset($email_match)) {
+                            echo $email_match;
+                        }
+                        if (isset($pass_match)) {
+                            echo $pass_match;
+                        }
+                        ?>
+                    </span>
                 </div>
                 <div class="button-group">
                     <button type="submit" class="save-btn" name="submit">Delete</button>

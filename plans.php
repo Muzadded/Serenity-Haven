@@ -12,8 +12,11 @@ if (isset($_POST['submit'])) {
     $insert = "INSERT INTO donation (name,email,phone,amount) VALUES ('$name','$email','$phone','$amount')";
 
     if (mysqli_query($conn, $insert)) {
-        $msg1 = "Your Donation is Successful";
-        $msg2 = "Thanks for Donating in Serenity Haven";
+        echo "<script>
+        if (confirm('Donation is Successful. Thanks for your kind Donation')) {
+            window.location.href = 'plans.php';
+        }
+    </script>";
     }
 }
 ?>
@@ -51,7 +54,10 @@ if (isset($_POST['submit'])) {
         <img src="assets/plans_cover.jpg" alt="">
         <p>Our Services</p>
     </div>
-    <p align="center" style="margin-top:100px; font-weight:bold; font-size:50px; color: #1A3636">Our Plans</p>
+    <div style="display: flex;justify-content: center;align-items: center; margin-top:100px">
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/e3czHLqs0ak?si=lVndLF-pT_pM38YJ&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p align="center" style="margin-top:50px; font-weight:bold; font-size:50px; color: #1A3636">Our Plans</p>
     <div id="our_plan">
         <div class="plan_card">
             <p align="center" style="font-weight:800;font-size:30px">Weekly Plan</p>
@@ -96,15 +102,15 @@ if (isset($_POST['submit'])) {
             <div class="col-12" style="margin:35px 0 0 40.8%">
                 <button type="submit" class="btn btn-success" style="color:white; width:100px; font-weight:500" name="submit">Donate</button><br>
             </div>
-            <div style="">
+            <div>
 
                 <span style="color:#3c763d; font-weight:bold; font-size:20px;">
                     <?php
                     if (isset($msg1)) {
-                        echo $msg1;?> <br> <?php
-                        echo $msg2;
-                    }
-                    ?>
+                        echo $msg1; ?> <br> <?php
+                                            echo $msg2;
+                                        }
+                                            ?>
                 </span>
             </div>
         </form>
