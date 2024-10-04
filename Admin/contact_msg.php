@@ -3,7 +3,7 @@
 include("../Connection.php");
 session_start();
 
-$user_data = mysqli_query($conn, "SELECT* FROM users WHERE status = 'active'");
+$user_data = mysqli_query($conn, "SELECT* FROM contact_msg WHERE 1");
 $i = 0;
 
 ?>
@@ -54,9 +54,9 @@ $i = 0;
                     <th>SL.</th>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Breakfast</th>
-                    <th>Lunch</th>
-                    <th>Dinner</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Action</th>
                 </tr>
             </thead>
 
@@ -69,9 +69,9 @@ $i = 0;
                         <td><?php echo $i; ?></td>
                         <td><?php echo $row['id'] ?></td>
                         <td><?php echo $row['name'] ?></td>
-                        <td><?php echo $row['breakfast']; ?></td>
-                        <td><?php echo $row['lunch']; ?></td>
-                        <td><?php echo $row['dinner']; ?></td>
+                        <td><?php echo $row['email'] ?></td>
+                        <td><?php echo $row['message'] ?></td>
+                        <td><a class="btn btn-danger" href="status.php?page=msg&id=<?php echo $row['id']?>">Delete</a></td>
                     </tr>
                 <?php
                 }
@@ -92,4 +92,3 @@ $i = 0;
 
 </html>
 
-<

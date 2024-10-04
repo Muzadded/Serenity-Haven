@@ -3,7 +3,7 @@
 include("../Connection.php");
 session_start();
 
-$user_data = mysqli_query($conn, "SELECT* FROM users WHERE 1");
+$user_data = mysqli_query($conn, "SELECT* FROM donation WHERE 1");
 $i = 0;
 
 ?>
@@ -29,9 +29,9 @@ $i = 0;
 <body>
     <div class="sidebar">
         <ul class="nav-links">
-        <li><a href="user_info.php">Dashboard</a></li>
-        <li><a href="daily_meal.php">Daily Meal</a></li>
-        <li><a href="user_msg.php">Message</a></li>
+            <li><a href="user_info.php">Dashboard</a></li>
+            <li><a href="daily_meal.php">Daily Meal</a></li>
+            <li><a href="contact_msg.php">Message</a></li>
             <li><a href="client_rqst.php" style="font-weight: bold;">New Member Request</a></li>
             <li><a href="donation_list.php">Donation</a></li>
             <a class="btn btn-success login" href="admin_login.php" role="button">Log out</a>
@@ -54,15 +54,9 @@ $i = 0;
                     <th>SL.</th>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Age</th>
-                    <th>Guardian Name</th>
                     <th>Email</th>
                     <th>Contact Number</th>
-                    <th>Address</th>
-                    <th>HEalth Record</th>
-                    <th>Hobby</th>
-                    <th>Plan</th>
-                    <th>Action</th>
+                    <th>Amount</th>
                 </tr>
             </thead>
 
@@ -75,15 +69,9 @@ $i = 0;
                         <td><?php echo $i; ?></td>
                         <td><?php echo $row['id'] ?></td>
                         <td><?php echo $row['name'] ?></td>
-                        <td><?php echo $row['age'] ?></td>
-                        <td><?php echo $row['g_name'] ?></td>
                         <td><?php echo $row['email'] ?></td>
-                        <td><?php echo $row['number'] ?></td>
-                        <td><?php echo $row['address'] ?></td>
-                        <td><?php echo $row['health_record'] ?></td>
-                        <td><?php echo $row['hobby'] ?></td>
-                        <td><?php echo $row['plan'] ?></td>
-                        <td></td>
+                        <td><?php echo $row['phone'] ?></td>
+                        <td><?php echo $row['amount'] ?></td>
                     </tr>
                 <?php
                 }
@@ -103,3 +91,4 @@ $i = 0;
 </body>
 
 </html>
+

@@ -14,3 +14,8 @@ if (isset($_GET['id']) && isset($_GET['status'])) {
         header('Location: user_info.php');
     }
 }
+if(isset($_GET['page']) && isset($_GET['id'])){
+    $user_id = $_GET['id'];
+    $delete = mysqli_query($conn, "DELETE FROM contact_msg WHERE id = $user_id");
+    header('Location: contact_msg.php');
+}

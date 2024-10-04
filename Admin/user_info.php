@@ -31,7 +31,7 @@ $i = 0;
         <ul class="nav-links">
             <li><a href="user_info.php">Dashboard</a></li>
             <li><a href="daily_meal.php">Daily Meal</a></li>
-            <li><a href="user_msg.php">Message</a></li>
+            <li><a href="contact_msg.php">Message</a></li>
             <li><a href="client_rqst.php" style="font-weight: bold;">New Member Request</a></li>
             <li><a href="donation_list.php">Donation</a></li>
             <a class="btn btn-success login" href="admin_login.php" role="button">Log out</a>
