@@ -41,8 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "90000";
     }
 
-    $insert = "INSERT INTO users (name,email,pass,g_name,g_relation,age,number,address,health_record,hobby,plan,breakfast,lunch,dinner,message,image,payment) VALUES
-                ('$name','$email','$pass','$gname','$grelation','$age','$number','$address','$healthRecord','$hobby','$plan','$b_meal','$l_meal','$d_meal','$meal_msg','$image','$payment')";
+    $insert = "INSERT INTO users (name,email,pass,g_name,g_relation,age,number,address,health_record,hobby,plan,breakfast,lunch,dinner,message,image,payment,status) VALUES
+                ('$name','$email','$pass','$gname','$grelation','$age','$number','$address','$healthRecord','$hobby','$plan','$b_meal','$l_meal','$d_meal','$meal_msg','$image','$payment','pending')";
 
     if (mysqli_query($conn, $insert)) {
 

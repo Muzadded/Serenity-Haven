@@ -1,3 +1,26 @@
+<?php
+
+include("Connection.php");
+session_start();
+
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $insert = "INSERT INTO contact_msg (name, email, message) VALUES ('$name', '$email', '$message')";
+
+    if(mysqli_query($conn,$insert)){
+        echo "<script>
+        if (confirm('Message Sent Successfully!')) {
+            window.location.href = 'contact_us.php';
+        }
+    </script>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +57,7 @@
     </div>
     <section class="form-section">
         <h2>Anything You want to Know</h2>
-        <form action="#" method="POST">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <div class="input-group">
                 <input type="text" id="name" name="name" placeholder="Name" required>
                 <input type="email" id="email" name="email" placeholder="Email" required>
@@ -44,8 +67,7 @@
                 <span id="char-count">0/1000</span>
             </div>
             <div class="button-group">
-                <button type="button" class="cancel-btn">Cancel</button>
-                <button type="submit" class="submit-btn">Submit</button>
+                <button type="submit" class="submit-btn" name="submit">Submit</button>
             </div>
         </form>
     </section>

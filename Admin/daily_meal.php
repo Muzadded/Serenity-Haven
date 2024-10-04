@@ -3,7 +3,7 @@
 include("../Connection.php");
 session_start();
 
-$user_data = mysqli_query($conn, "SELECT* FROM users WHERE status != 'pending'");
+$user_data = mysqli_query($conn, "SELECT* FROM users WHERE status = 'active'");
 $i = 0;
 
 ?>
@@ -54,16 +54,9 @@ $i = 0;
                     <th>SL.</th>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Age</th>
-                    <th>Guardian Name</th>
-                    <th>Email</th>
-                    <th>Contact Number</th>
-                    <th>Address</th>
-                    <th>HEalth Record</th>
-                    <th>Hobby</th>
-                    <th>Plan</th>
-                    <th>Status</th>
-                    <th>Action</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Dinner</th>
                 </tr>
             </thead>
 
@@ -76,24 +69,9 @@ $i = 0;
                         <td><?php echo $i; ?></td>
                         <td><?php echo $row['id'] ?></td>
                         <td><?php echo $row['name'] ?></td>
-                        <td><?php echo $row['age'] ?></td>
-                        <td><?php echo $row['g_name'] ?></td>
-                        <td><?php echo $row['email'] ?></td>
-                        <td><?php echo $row['number'] ?></td>
-                        <td><?php echo $row['address'] ?></td>
-                        <td><?php echo $row['health_record'] ?></td>
-                        <td><?php echo $row['hobby'] ?></td>
-                        <td><?php echo $row['plan'] ?></td>
-                        <td style="color: red;"><?php echo $row['status'] ?></td>
-                        <td> <?php
-                                if($row['status'] == "active") { ?>
-                                <a class="btn btn-secondary" href="status.php?status=blocked&id=<?php echo $row['id']?>">Block</a>
-                            <?php  }elseif ($row['status'] == "blocked") {?>
-                                <a class="btn btn-Success" href="status.php?status=active&id=<?php echo $row['id']?>">Active</a>
-                                <a class="btn btn-danger" href="status.php?status=delete&id=<?php echo $row['id']?>">Delete</a>
-                            <?php } ?>
-
-                        </td>
+                        <td><?php echo $row['breakfast']; ?></td>
+                        <td><?php echo $row['lunch']; ?></td>
+                        <td><?php echo $row['dinner']; ?></td>
                     </tr>
                 <?php
                 }
