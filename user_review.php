@@ -1,3 +1,25 @@
+<?php 
+
+    include("Connection.php");
+    session_start();
+
+    $id = $_SESSION['user_id'];
+
+    if(isset($_POST['submit'])){
+        $comment = $_POST['comment'];
+
+        $insert = "INSERT INTO user_comment (user_id,comment) VALUES ('$id','$comment')";
+        if (mysqli_query($conn, $insert)) {
+
+            $sent_message = "Message Sent Successfully";
+        } else {
+            echo 'Query Error: ' . mysqli_query($conn, $insert);
+        }
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,14 +64,19 @@
 
         <div class="comment-section">
             <h2>Give your Thoughts About Us</h2>
-            <form action="" method="">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <div class="form-group">
-                    <label for="comment">Comment</label>
-                    <textarea id="comment" name="comment" placeholder="Enter your email or comment"></textarea>
+                    <textarea id="comment" name="comment" placeholder="Write your comment here" required></textarea>
+                    <span style="color:#3c763d">
+                        <?php
+                            if(isset($sent_message)){
+                                echo $sent_message;
+                            }
+                        ?>
+                    </span>
                 </div>
                 <div class="button-group">
-                    <button type="button" class="cancel-btn">Cancel</button>
-                    <button type="submit" class="send-btn">Send</button>
+                    <button type="submit" class="send-btn" name="submit">Send</button>
                 </div>
             </form>
         </div>

@@ -8,6 +8,10 @@ $sql = "SELECT* from users WHERE id = $id";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $profile = $row['image'];
+$selectedPlan = $row['plan'];
+$selectedBreakfast = $row['breakfast'];
+$selectedLunch = $row['lunch'];
+$selectedDinner = $row['dinner'];
 
 if (isset($_POST['submit'])) {
 
@@ -28,13 +32,10 @@ if (isset($_POST['submit'])) {
 
     if ($plan == "weekly") {
         $payment = 3000;
-        echo "3000";
     } elseif ($plan == "monthly") {
         $payment = 9000;
-        echo "9000";
     } elseif ($plan == "yearly") {
         $payment = 90000;
-        echo "90000";
     }
 
     $check_email = mysqli_query($conn, "SELECT *FROM users where email = '$email' AND id != $id");
@@ -50,7 +51,8 @@ if (isset($_POST['submit'])) {
 
         if (mysqli_query($conn, $update)) {
 
-            header('Location: user_dash.php');
+            $success_msg = "Profile Update Successful";
+            header("Location: user_dash.php?value=" . urlencode($success_msg));
         } else {
             echo 'Query Error: ' . mysqli_error($conn);
         }
@@ -96,6 +98,7 @@ if (isset($_POST['submit'])) {
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
                 <div class="profile-pic">
                     <?php echo '<img src="profile/' . $profile . '" alt="Profile Picture">' ?><br>
+
                 </div>
                 <br>
                 <div class="form-group">
@@ -138,39 +141,39 @@ if (isset($_POST['submit'])) {
                     <input type="text" id="email" name="hobby" value="<?php echo $row['hobby'] ?>" required class="input_field">
                 </div>
                 <div class="form-group">
-                    <label for="service-plan">Your Service Plan</label>
+                    <label for="service-plan">Breakfast</label>
                     <select name="breakfast" class="input_field" required>
                         <option value="" disabled selected>Choose your Breakfast</option>
-                        <option value="meal1">Meal plan 1</option>
-                        <option value="meal2">Meal plan 1</option>
-                        <option value="meal3">Meal plan 1</option>
+                        <option value="meal1" <?php if ($selectedBreakfast == 'meal1') echo 'selected'; ?>>Meal plan 1</option>
+                        <option value="meal2" <?php if ($selectedBreakfast == 'meal2') echo 'selected'; ?>>Meal plan 2</option>
+                        <option value="meal3" <?php if ($selectedBreakfast == 'meal3') echo 'selected'; ?>>Meal plan 3</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="service-plan">Your Service Plan</label>
+                    <label for="service-plan">Lunch</label>
                     <select name="lunch" class="input_field" required>
                         <option value="" disabled selected>Choose your Lunch</option>
-                        <option value="meal1">Meal plan 1</option>
-                        <option value="meal2">Meal plan 1</option>
-                        <option value="meal3">Meal plan 1</option>
+                        <option value="meal1" <?php if ($selectedLunch == 'meal1') echo 'selected'; ?>>Meal plan 1</option>
+                        <option value="meal2" <?php if ($selectedLunch == 'meal2') echo 'selected'; ?>>Meal plan 2</option>
+                        <option value="meal3" <?php if ($selectedLunch == 'meal3') echo 'selected'; ?>>Meal plan 3</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="service-plan">Your Service Plan</label>
+                    <label for="service-plan">Dinner</label>
                     <select name="dinner" class="input_field" required>
                         <option value="" disabled selected>Choose your Dinner</option>
-                        <option value="meal1">Meal plan 1</option>
-                        <option value="meal2">Meal plan 1</option>
-                        <option value="meal3">Meal plan 1</option>
+                        <option value="meal1" <?php if ($selectedDinner == 'meal1') echo 'selected'; ?>>Meal plan 1</option>
+                        <option value="meal2" <?php if ($selectedDinner == 'meal2') echo 'selected'; ?>>Meal plan 2</option>
+                        <option value="meal3" <?php if ($selectedDinner == 'meal3') echo 'selected'; ?>>Meal plan 3</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="service-plan">Your Service Plan</label>
                     <select name="plan" class="input_field" required>
                         <option value="" disabled selected>Change your plan</option>
-                        <option value="weekly">Weekly</option>
-                        <option value="monthly">Monthly</option>
-                        <option value="yearly">Yearly</option>
+                        <option value="weekly" <?php if ($selectedPlan == 'weekly') echo 'selected'; ?>>Weekly</option>
+                        <option value="monthly" <?php if ($selectedPlan == 'monthly') echo 'selected'; ?>>Monthly</option>
+                        <option value="yearly" <?php if ($selectedPlan == 'yearly') echo 'selected'; ?>>Yearly</option>
                     </select>
                 </div>
                 <div class="form-group">

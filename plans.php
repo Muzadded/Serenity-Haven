@@ -1,3 +1,23 @@
+<?php
+
+include("Connection.php");
+session_start();
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $amount = $_POST['amount'];
+
+    $insert = "INSERT INTO donation (name,email,phone,amount) VALUES ('$name','$email','$phone','$amount')";
+
+    if (mysqli_query($conn, $insert)) {
+        $msg1 = "Your Donation is Successful";
+        $msg2 = "Thanks for Donating in Serenity Haven";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,44 +57,55 @@
             <p align="center" style="font-weight:800;font-size:30px">Weekly Plan</p>
             <p align="center" style="font-size:15px; font-weight:500;opacity:0.8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p align="center" style="font-weight:800;font-size:30px">3000</p>
-            <a class="btn join_btn" href="#" role="button">Join</a>
+            <a class="btn join_btn" href="register.php" role="button">Register</a>
         </div>
         <div class="plan_card">
             <p align="center" style="font-weight:800;font-size:30px">Monthly Plan</p>
             <p align="center" style="font-size:15px; font-weight:500;opacity:0.8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p align="center" style="font-weight:800;font-size:30px">9000</p>
-            <a class="btn join_btn" href="#" role="button">Join</a>
+            <a class="btn join_btn" href="register.php" role="button">Register</a>
         </div>
         <div class="plan_card">
             <p align="center" style="font-weight:800;font-size:30px">Yearly <br> Plan</p>
             <p align="center" style="font-size:15px; font-weight:500;opacity:0.8">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p align="center" style="font-weight:800;font-size:30px">90000</p>
-            <a class="btn join_btn" href="#" role="button">Join</a>
+            <a class="btn join_btn" href="register.php" role="button">Register</a>
         </div>
 
     </div>
     <p align="center" style="font-weight:bold; font-size:30px; color: #1A3636">To book your plan, click the Join Button</p>
     <p align="center" style="margin-top:100px; font-weight:bold; font-size:30px; color: #1A3636">Donate Now!</p>
     <div id="donation">
-        <form class="row g-3">
+        <form class="row g-3" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <div class="col-md-5">
                 <label for="inputEmail4" class="form-label" style="font-weight:500">Full Name</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Your Name">
+                <input type="text" class="form-control" placeholder="Your Name" name="name" required>
             </div>
-            <div class="col-md-5"  style="margin-left:100px">
+            <div class="col-md-5" style="margin-left:100px">
                 <label for="inputPassword4" class="form-label" style="font-weight:500">Email</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="example@mail.com">
+                <input type="email" class="form-control" placeholder="example@mail.com" name="email" required>
             </div>
             <div class="col-md-5">
                 <label for="inputEmail4" class="form-label" style="font-weight:500">Phone</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="0123456678">
+                <input type="text" class="form-control" placeholder="0123456678" name="phone" required>
             </div>
-            <div class="col-md-5" style="margin-left:100px" >
+            <div class="col-md-5" style="margin-left:100px">
                 <label for="inputPassword4" class="form-label" style="font-weight:500">Amount</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder=" 9000 In Tk">
+                <input type="text" class="form-control" placeholder="TAKA" name="amount" required>
             </div>
             <div class="col-12" style="margin:35px 0 0 40.8%">
-                <button type="submit" class="btn btn-success" style="color:white; width:100px; font-weight:500" >Donate</button>
+                <button type="submit" class="btn btn-success" style="color:white; width:100px; font-weight:500" name="submit">Donate</button><br>
+            </div>
+            <div style="">
+
+                <span style="color:#3c763d; font-weight:bold; font-size:20px;">
+                    <?php
+                    if (isset($msg1)) {
+                        echo $msg1;?> <br> <?php
+                        echo $msg2;
+                    }
+                    ?>
+                </span>
             </div>
         </form>
     </div>

@@ -83,11 +83,11 @@ if (isset($_POST['submit'])) {
                 <br>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="rifats@gmail.com" required class="input_field">
+                    <input type="email" id="email" name="email" placeholder="user email" required class="input_field">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="********" required class="input_field">
+                    <input type="password" id="password" name="password" placeholder="password" required class="input_field">
                 </div>
                 <div class="button-group">
                     <button type="submit" class="save-btn" name="submit">Delete</button>

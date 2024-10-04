@@ -33,7 +33,7 @@
         <p>Contact Us</p>
     </div>
     <section class="form-section">
-        <h2>Submit an advice or complaint</h2>
+        <h2>Anything You want to Know</h2>
         <form action="#" method="POST">
             <div class="input-group">
                 <input type="text" id="name" name="name" placeholder="Name" required>

@@ -8,6 +8,10 @@ $sql = "SELECT* from users WHERE id = $id";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $profile = $row['image'];
+
+if(isset($_GET['value'])){
+    $success_msg = $_GET['value'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +60,13 @@ $profile = $row['image'];
                 <div class="profile-pic">
                     <?php echo '<img src="profile/' . $profile . '" alt="Profile Picture">' ?><br>
                 </div>
+                <span style="color:#3c763d; font-weight:bold">
+                    <?php
+                    if (isset($success_msg)) {
+                        echo $success_msg;
+                    }
+                    ?>
+                </span>
                 <br>
                 <div class="form-group">
                     <label for="name">Name</label>
